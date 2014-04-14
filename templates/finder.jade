@@ -1,0 +1,10 @@
+h2 folder #{folder}
+if (parent !== folder)
+  a(class='parent', href='#{parent}')= parent
+ul
+  each file in files
+    li
+      if file.folder
+          a(href='#{file.name}')= file.name
+      else
+        a= file.name
